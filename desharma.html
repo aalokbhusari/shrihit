@@ -1,0 +1,1149 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shriya & Rohit Wedding</title>
+    <style>
+        .wedding-events {
+            font-family: "Lucida Calligraphy", cursive;
+            color: #b22222;
+            text-align: center;
+            margin: 30px 0;
+            font-size: 26px;
+        }
+
+            .wedding-events i,
+            .wedding-events span {
+                margin: 0 8px;
+                color: #b22222;
+            }
+
+        .lucida-font {
+            font-family: "Lucida Handwriting", "Lucida Calligraphy", cursive;
+            font-size: 3.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .lucida-font-small {
+            font-family: "Lucida Handwriting", "Lucida Calligraphy", cursive;
+            font-size: 1.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #fff8f0;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            position: relative;
+            background: #b22222;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 12px;
+            margin: 20px auto;
+        }
+
+        /* Ganesha icon at top */
+        .ganesha-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        /* Decorative corner brackets */
+        .corner {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 3px solid white;
+        }
+
+        .top-left {
+            top: 10px;
+            left: 10px;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .top-right {
+            top: 10px;
+            right: 10px;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .bottom-left {
+            bottom: 10px;
+            left: 10px;
+            border-right: none;
+            border-top: none;
+        }
+
+        .bottom-right {
+            bottom: 10px;
+            right: 10px;
+            border-left: none;
+            border-top: none;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        header h2 {
+            margin: 10px 0;
+            font-size: 2.5em; /* Larger font for names */
+            font-weight: bold;
+        }
+
+        header h3 {
+            margin: 5px 0;
+            font-size: 1.2em;
+            font-weight: normal;
+        }
+
+        #countdown {
+            margin-top: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .time-box {
+            display: inline-block;
+            margin: 0 10px;
+            text-align: center;
+            background: #fff;
+            color: #b22222;
+            border: 2px solid #b22222;
+            border-radius: 8px;
+            padding: 10px 15px;
+            min-width: 80px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+            .time-box span {
+                display: block;
+                font-size: 2em;
+                font-weight: bold;
+            }
+
+        .intro-text {
+            text-align: center;
+            padding: 25px 15px;
+            background: #fdf3e7;
+            border-top: 2px solid #b22222;
+            border-bottom: 2px solid #b22222;
+            margin: 0;
+            font-size: 26px;
+        }
+
+            .intro-text h2 {
+                margin: 0;
+                font-size: 2em;
+                color: #b22222;
+            }
+
+            .intro-text p {
+                margin: 10px 0 0;
+                font-size: 1.2em;
+                color: #333;
+            }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background: #fff8f0;
+            padding: 15px;
+            gap: 15px;
+        }
+
+        .tab-icon {
+            font-size: 1.2em;
+        }
+
+        .tab {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            font-weight: bold;
+            border: 2px solid transparent;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: #f4e1d2;
+            color: #333;
+        }
+
+            .tab:hover {
+                background: #f9d5a7;
+                transform: translateY(-2px);
+            }
+
+            .tab.active {
+                border: 2px solid #b22222;
+                background: #fff;
+                color: #b22222;
+                box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+            }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: #fff;
+            border-top: 1px solid #ddd;
+            box-sizing: border-box; /* ensures padding doesn’t break layout */
+        }
+
+            /* Active tab */
+            .tab-content.active {
+                display: block;
+            }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .tab-content {
+                padding: 15px; /* reduce padding for smaller screens */
+                font-size: 14px; /* adjust text size */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tab-content {
+                padding: 10px;
+                font-size: 13px;
+            }
+        }
+
+        .event-card {
+            background: #fdf3e7;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .event-card-custom {
+            background: #fff;
+            border: 2px solid #b22222;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            overflow: hidden;
+            margin: 20px auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Tablet screens */
+        @media (max-width: 768px) {
+            .event-card-custom {
+                max-width: 90%; /* shrink width to fit smaller screens */
+                margin: 15px auto;
+                padding: 15px;
+            }
+        }
+
+        /* Mobile screens */
+        @media (max-width: 480px) {
+            .event-card-custom {
+                max-width: 95%; /* nearly full width */
+                margin: 10px auto;
+                padding: 12px;
+                border-radius: 8px; /* slightly smaller radius for compact look */
+            }
+        }
+
+        .event-header {
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .event-header .icon {
+                font-size: 1.8em;
+                margin-right: 10px;
+            }
+
+            .event-header h2 {
+                margin: 0;
+                font-size: 1.8em;
+            }
+
+        /* Themed headers */
+        .engagement-header {
+            background: #800000;
+        }
+        /* deep maroon */
+        .haldi-header {
+            background: #daa520;
+        }
+        /* golden yellow */
+        .sangeet-header {
+            background: #800080;
+        }
+        /* royal purple */
+        .wedding-header {
+            background: #b22222;
+        }
+        /* deep red */
+
+        /* Details */
+        .event-details {
+            padding: 20px;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+            .event-details ul {
+                margin: 10px 0;
+                padding-left: 20px;
+            }
+
+        .event-details-grid {
+            padding: 20px;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .col {
+            flex: 1;
+            padding-right: 15px;
+        }
+
+        .col-full {
+            flex: 1;
+        }
+
+        .detail-block {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: 36px; /* base size for desktop */
+        }
+
+        .detail-top {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .detail-icon {
+            font-size: 1.2em;
+            color: #b22222;
+        }
+
+        .detail-label {
+            font-size: 1.0em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #555;
+            margin: 0;
+            font-weight: bold; /* makes the text bold */
+            color: #b22222
+        }
+
+        .detail-value {
+            margin-top: 5px;
+            font-size: 1.25em;
+            color: #333;
+        }
+
+        .detail-value-card {
+            margin-top: 5px;
+            font-size: 1.2em;
+            padding: 40px 20px;
+            background: white;
+            text-align: center;
+            margin: 0 auto; /* center horizontally */
+            border: 2px solid #b22222;
+            border-radius: 10px;
+            box-sizing: border-box;
+            max-width: 1000px; /* optional: limit width on large screens */
+        }
+
+        .dress-code {
+            border: 2px dashed #b22222;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-top: 15px;
+            background: #fff8f0;
+            font-style: italic;
+            color: #b22222;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .text-muted-foreground {
+            color: hsl(var(--muted-foreground));
+        }
+
+
+        .tracking-wider {
+            letter-spacing: 0.05em;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        .text-xs {
+            font-size: 0.75rem;
+            line-height: 1rem;
+        }
+
+        blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
+            margin: 0px;
+        }
+
+        .venue-section {
+            padding: 40px 20px;
+            background: #fff8f0;
+            text-align: center;
+            margin: 0 auto; /* center horizontally */
+            border: 2px solid #b22222;
+            border-radius: 10px;
+            box-sizing: border-box;
+            max-width: 1000px; /* optional: limit width on large screens */
+        }
+
+        /* Tablet screens */
+        @media (max-width: 768px) {
+            .venue-section {
+                padding: 30px 15px;
+                border-radius: 8px;
+                font-size: 15px;
+                max-width: 90%;
+            }
+        }
+
+        /* Mobile screens */
+        @media (max-width: 480px) {
+            .venue-section {
+                padding: 20px 10px;
+                border-radius: 6px;
+                font-size: 14px;
+                max-width: 95%;
+            }
+        }
+
+        .venue-title {
+            font-size: 2em;
+            color: #b22222;
+            margin-bottom: 5px;
+        }
+
+        .venue-subtitle {
+            font-size: 2.5em;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .venue-container {
+            display: flex;
+            justify-content: center; /* centers child horizontally */
+            margin: 0 auto; /* centers the container itself */
+            max-width: 700px; /* match your tab width */
+        }
+
+        .venue-card {
+            flex: 1;
+            background: #fff;
+            border: 2px solid #b22222;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .venue-card {
+            flex: 1;
+            background: #fff;
+            border: 2px solid #b22222;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            box-sizing: border-box;
+            min-width: 250px; /* ensures cards don’t shrink too much */
+        }
+
+        /* Tablet screens */
+        @media (max-width: 768px) {
+            .venue-card {
+                flex: 1 1 100%; /* stack cards vertically */
+                margin-bottom: 20px;
+                padding: 15px;
+            }
+        }
+
+        /* Mobile screens */
+        @media (max-width: 480px) {
+            .venue-card {
+                flex: 1 1 100%; /* full width on mobile */
+                margin-bottom: 15px;
+                padding: 12px;
+                border-radius: 8px;
+            }
+        }
+
+        .venue-info p {
+            margin: 15px 0;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        .venue-button {
+            background: #b22222;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s ease;
+        }
+
+            .venue-button:hover {
+                background: #8b1a1a;
+            }
+
+        .detail-icon {
+            font-size: 1.2em;
+        }
+
+        .dress-code-block {
+            background-color: #fdf3e7; /* soft peach tint */
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .tabs {
+            flex: 1;
+            font-size: 26px;
+        }
+
+        .header-photo img {
+            max-width: 150px; /* reduced size */
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .gallery-section {
+            max-width: 700px;
+            margin: 40px auto;
+            text-align: center;
+            padding: 20px;
+            background: #fff8f0;
+            border-radius: 12px;
+            border: 2px solid #b22222;
+        }
+
+        .gallery-title {
+            font-size: 2em;
+            color: #b22222;
+            margin-bottom: 5px;
+        }
+
+        .gallery-subtitle {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+            .gallery-grid img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                object-fit: cover;
+            }
+
+        .gallery-slideshow {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+            .gallery-slideshow img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 12px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+
+        .gallery-controls {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+            .gallery-controls button {
+                background: #b22222;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 25px;
+                cursor: pointer;
+                font-size: 1em;
+                transition: background 0.3s ease;
+            }
+
+                .gallery-controls button:hover {
+                    background: #8b1a1a;
+                }
+
+        .site-footer {
+            background: #b22222; /* same maroon tone for consistency */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 3px solid #8b1a1a;
+        }
+
+            .site-footer a {
+                color: #ffd700; /* golden accent for links */
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+                .site-footer a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Ganesha Icon -->
+        <!-- Photo just below Rohit -->
+        <div class="header-photo">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.BCoy_wTlq1xl8En4D8uzBgHaFj?cb=defcache2&pid=ImgDet&defcache=1&w=203&h=152&c=7&o=7&rm=3"
+                 alt="Jai Ganesh" />
+        </div>
+
+        <!-- Decorative brackets -->
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+        <h3>|| Jai Shri Mataji ||</h3>
+        <h3>|| Shri Lakshmi Vyankatesh Prasanna ||</h3> <br />
+        <h3>We're Getting Married</h3> <br />
+        <h1 class="lucida-font">Shriya</h1>
+        <h1 class="lucida-font">&</h1>
+        <h1 class="lucida-font">Rohit</h1><br />
+
+        <h3>Sunday, May 10, 2026</h3><br />
+        <h3>Counting Down To Our Special Day</h3>
+        <div id="countdown">
+            <div class="time-box"><span id="days">00</span>Days</div>
+            <div class="time-box"><span id="hours">00</span>Hours</div>
+            <div class="time-box"><span id="minutes">00</span>Minutes</div>
+            <div class="time-box"><span id="seconds">00</span>Seconds</div>
+        </div>
+    </header>
+
+    <div class="intro-text">
+        <h2 class="wedding-events">🎉 Wedding Events 🎉</h2>
+        <div class="detail-value">Join us for these beautiful celebrations as we begin our journey together</div>
+    </div>
+
+    <div class="tabs-photo-container">
+        <!-- Tabs Section -->
+        <div class="tabs">
+            <div class="tab active" data-tab="engagement">
+                <span class="tab-icon">💍</span> Engagement
+            </div>
+            <div class="tab" data-tab="haldi">
+                <span class="tab-icon">🧡</span> Haldi
+            </div>
+            <div class="tab" data-tab="sangeet">
+                <span class="tab-icon">💃</span> Sangeet
+            </div>
+            <div class="tab" data-tab="wedding">
+                <span class="tab-icon">💐</span> Wedding
+            </div>
+            <!--<div class="tab" data-tab="gallery">
+                <span class="tab-icon">🖼️</span> Photo Gallery
+            </div>-->
+        </div>
+
+    </div>
+
+    <div id="engagement" class="tab-content active">
+        <div class="event-card-custom">
+            <div class="event-header engagement-header">
+                <span class="icon">💍</span>
+                <h2>Engagement Ceremony</h2>
+            </div>
+            <div class="event-details-grid">
+                <div class="row">
+                    <div class="col-full" style="background-color: #80000030 ">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">📅</span>
+                                <p class="detail-label ">Date:</p>
+                            </div>
+                            <div class="detail-value">May 9, 2026</div>
+                        </div>
+                    </div>
+                    <div class="col-full" style="background-color: #80000030 ">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">⏰</span>
+                                <p class="detail-label">Time:</p>
+                            </div>
+                            <div class="detail-value">11:00 AM onwards</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">📍</span>
+                                <p class="detail-label">Venue:</p>
+                            </div>
+                            <div class="detail-value">Pearl Banquet Hall</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-full" style="background-color: #80000030 ">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">🍽️</span>
+                                <p class="detail-label">Culinary Delights:</p>
+                            </div>
+                            <div class="detail-value">Lunch at 1:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-full">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">🎉</span><br />
+                                <p class="detail-label">Activities:</p>
+                            </div>
+                            <div class="detail-value">
+                                <ul>
+                                    <li>Welcoming Guest</li>
+                                    <li>Ring exchange ceremony</li>
+                                    <li>Cake Cutting</li>
+                                    <li>Photo session</li>
+                                    <li>Family blessings</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-full" style="background-color: #80000030">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">👗</span>
+                                <p class="detail-label">Dress Code:</p>
+                            </div>
+                            <div class="detail-value">
+                                Saree/Lehenga for ladies, Kurta/Sherwani for gents
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="haldi" class="tab-content">
+        <div class="event-card-custom">
+            <div class="event-header haldi-header">
+                <span class="icon">🌼</span>
+                <h2>Haldi Ceremony</h2>
+            </div>
+            <div class="event-details-grid">
+                <div class="row">
+                    <div class="col-full" style="background-color: #daa52045 ">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">📅</span>
+                                <p class="detail-label">Date:</p>
+                            </div>
+                            <div class="detail-value">May 09, 2026</div>
+                        </div>
+                    </div>
+                    <div class="col-full" style="background-color: #daa52045 ">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">⏰</span>
+                                <p class="detail-label">Time:</p>
+                            </div>
+                            <div class="detail-value">3:00 PM Onwards</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">📍</span>
+                                <p class="detail-label">Venue:</p>
+                            </div>
+                            <div class="detail-value">Pool Side</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-full" style="background-color: #daa52045 ">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">🍽️</span>
+                                <p class="detail-label">Culinary Delights:</p>
+                            </div>
+                            <div class="detail-value">Hi-Tea at 4:30 PM</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-full">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">🎉</span>
+                                <p class="detail-label">Activities:</p>
+                            </div>
+                            <div class="detail-value">
+                                <ul>
+                                    <li>Haldi application rituals</li>
+                                    <li>Phoolon Ki Haldi</li>
+                                    <li>Traditional songs</li>
+                                    <li>Photo session</li>
+                                    <li>Family blessings</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-full" style="background-color: #daa52045">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">👗</span>
+                                <p class="detail-label">Dress Code:</p>
+                            </div>
+                            <div class="detail-value">
+                                Yellow / Orange attire
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sangeet" class="tab-content">
+        <div class="event-card-custom">
+            <div class="event-header sangeet-header">
+                <span class="icon">💃</span>
+                <h2>Sangeet Night</h2>
+            </div>
+            <div class="event-details-grid">
+                <div class="row">
+                    <div class="col-full" style="background-color: #80008033">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">📅</span>
+                                <p class="detail-label">Date:</p>
+                            </div>
+                            <div class="detail-value">May 9, 2026</div>
+                        </div>
+                    </div>
+                    <div class="col-full" style="background-color: #80008033">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">⏰</span>
+                                <p class="detail-label">Time:</p>
+                            </div>
+                            <div class="detail-value">7:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-full">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">📍</span>
+                                <p class="detail-label">Venue:</p>
+                            </div>
+                            <div class="detail-value">Pearl Banquet Hall</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-full" style="background-color: #80008033">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">🍽️</span>
+                                <p class="detail-label">Culinary Delights:</p>
+                            </div>
+                            <div class="detail-value">Delicacies 9:00 PM Onwards</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-full">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">🎉</span>
+                                <p class="detail-label">Activities:</p>
+                            </div>
+                            <div class="detail-value">
+                                <ul>
+                                    <li>Dance performances</li>
+                                    <li>Music and DJ</li>
+                                    <li>Fun activities</li>
+                                    <li>Singing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-full" style="background-color: #80008033">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">👗</span>
+                                <p class="detail-label">Dress Code:</p>
+                            </div>
+                            <div class="detail-value">
+                                Glits and Glam attire
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wedding" class="tab-content">
+        <div class="event-card-custom">
+            <div class="event-header wedding-header">
+                <span class="icon"></span>
+                <h2>Wedding Ceremony</h2>
+            </div>
+            <div class="event-details-grid">
+                <div class="row">
+                    <div class="col-full" style="background-color: #b2222240">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">📅</span>
+                                <p class="detail-label">Date:</p>
+                            </div>
+                            <div class="detail-value">May 10, 2026</div>
+                        </div>
+                    </div>
+                    <div class="col-full" style="background-color: #b2222240">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">⏰</span>
+                                <p class="detail-label">Time:</p>
+                            </div>
+                            <div class="detail-value">12:31 PM</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-full">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">📍</span>
+                                <p class="detail-label">Venue:</p>
+                            </div>
+                            <div class="detail-value">Pearl Banquet Hall</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-full" style="background-color: #b2222240">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">🍽️</span>
+                                <p class="detail-label">Culinary Delights:</p>
+                            </div>
+                            <div class="detail-value">Grand Lunch 1:00 PM Onwards</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-full">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">🎉</span>
+                                <p class="detail-label">Activities:</p>
+                            </div>
+                            <div class="detail-value">
+                                <ul>
+                                    <li>Baraat procession (08:00 AM)</li>
+                                    <li>Varmala (09:00 AM)</li>
+                                    <li>Kanyaadan, Saptapadi, Homa Havana (09:00 AM Onwards)</li>
+                                    <li>Sindoor Ritual (12:31 PM)</li>
+                                    <li>Vows & blessings</li>
+                                    <li>Bidai (04:00 PM)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-full" style="background-color: #b2222240">
+                        <div class="detail-block">
+                            <div class="detail-top">
+                                <span class="detail-icon">👗</span>
+                                <p class="detail-label">Dress Code:</p>
+                            </div>
+                            <div class="detail-value">
+                                Traditional attire
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="gallery" class="tab-content gallery-section">
+        <div>
+            <h2 class="gallery-title">Our Gallery</h2>
+            <p class="gallery-subtitle">Capturing our beautiful moments together</p>
+
+            <div class="gallery-slideshow">
+                <img id="gallery-image"
+                     src="https://drive.google.com/uc?export=view&id=15tk7WrAwiPayo8S44F9d5yDfXTrKfW3N&authuser=0"
+                     alt="Moment 1">
+                <img src="https://drive.google.com/uc?export=view&id=15tk7WrAwiPayo8S44F9d5yDfXTrKfW3N">
+                <div class="gallery-controls">
+                    <button onclick="prevImage()">⬅ Previous</button>
+                    <button onclick="nextImage()">Next ➡</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="venue-section">
+        <h2 class="venue-title"><span class="detail-icon">🏛️</span> The Grand Wedding Venue</h2>
+        <p class="venue-subtitle">Find your way to our celebration</p>
+
+        <div class="detail-value-card">
+            <!-- Venue Information Card -->
+            <div class="detail-value">
+                <div>
+                    <div class="detail-value"><strong style="color: #b22222">ADDRESS</strong><br>Sayaji Hotel, 135/136, Mumbai-Bangalore Bypass Highway, Wakad, Pune, Maharashtra 411057</div>
+                    <div class="detail-value"><strong style="color: #b22222">CONTACT</strong><br><span class="detail-icon">📞</span> +91 9049996320 / +91 6364866654</div>
+                    <div class="detail-value"><strong style="color: #b22222">PARKING</strong><br><span class="detail-icon">🚗</span> Valet parking available for all guests.</div>
+
+                    <!-- Google Maps Link -->
+                    <div class="detail-value">
+                        <span class="detail-icon">📍</span>
+                        <a href="https://maps.app.goo.gl/SiTaix5RQig9P11B6"
+                           target="_blank" class="map-link">
+                            View on Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Tab switching
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+
+        // Countdown
+        function updateCountdown() {
+            const weddingDate = new Date("May 09, 2026 10:00:00").getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days < 0 ? "00" : days;
+            document.getElementById("hours").innerText = hours < 0 ? "00" : hours;
+            document.getElementById("minutes").innerText = minutes < 0 ? "00" : minutes;
+            document.getElementById("seconds").innerText = seconds < 0 ? "00" : seconds;
+
+            if (distance < 0) {
+                document.getElementById("countdown").innerHTML = "The wedding day has arrived!";
+            }
+        }
+        setInterval(updateCountdown, 1000);
+        const images = [
+            "https://drive.google.com/uc?export=view&id=15tk7WrAwiPayo8S44F9d5yDfXTrKfW3N",
+            "https://drive.google.com/uc?export=view&id=15tk7WrAwiPayo8S44F9d5yDfXTrKfW3N",
+            "https://drive.google.com/uc?export=view&id=15tk7WrAwiPayo8S44F9d5yDfXTrKfW3N",
+            "https://images.pexels.com/photos/265947/pexels-photo-265947.jpeg?auto=compress&cs=tinysrgb&h=300",
+            "https://images.pexels.com/photos/169193/pexels-photo-169193.jpeg?auto=compress&cs=tinysrgb&h=300",
+            "https://images.pexels.com/photos/2959194/pexels-photo-2959194.jpeg?auto=compress&cs=tinysrgb&h=300",
+            "https://images.pexels.com/photos/169191/pexels-photo-169191.jpeg?auto=compress&cs=tinysrgb&h=300",
+            "https://images.pexels.com/photos/2959193/pexels-photo-2959193.jpeg?auto=compress&cs=tinysrgb&h=300",
+            "https://images.pexels.com/photos/265946/pexels-photo-265946.jpeg?auto=compress&cs=tinysrgb&h=300"
+        ];
+
+        let currentIndex = 0;
+
+        function showImage(index) {
+            const imgElement = document.getElementById("gallery-image");
+            imgElement.src = images[index];
+            imgElement.alt = "Moment " + (index + 1);
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+
+    </script>
+</body>
+</html>
